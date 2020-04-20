@@ -1,5 +1,5 @@
 # Drug-sensitivity-prediction
-User need to save input RNA-seq and target drug response files in the same folder. Name of input gene expression file is **RNASeq_log.csv** and drug response file is **Drug_AUC.csv** in all the codes. 
+User need to save input RNA-seq, target drug response files and embedded matrix in the same folder. Name of input gene expression file is **RNASeq_log.csv** and drug response file is **Drug_AUC.csv** in all the codes. 
 
 ## Required Python packages
 - Numpy
