@@ -1,7 +1,7 @@
 # Drug-sensitivity-prediction
 Users need to save input RNA-seq and target drug response files in the same folder. 
 
-**E_net.py** 
+## **E_net.py** 
 
 The code for elastic net regressor 
 
