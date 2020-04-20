@@ -13,7 +13,7 @@ A deep neural network that takes gene expression as input, predict drug response
 ## **nn_embed.py**
 A deep neural network that takes gene expression as input, predict drug response in terms of AUC and finally gives the correlation coefficient between the predicted AUC and actual AUC as output. User needs to specify the path to the folder where the input and target files are saved at the beginning of the code to the variable **_path_**. This code selects top 100 features based on correlation coefficient between genes and target drug response which can be changed by modifying the variable **_N_input_**. It uses the co-expression matrix of that 100 genes to introduce network information into the prediction.  
 ### **Framework**
-![Image description](link-to-image)
+![Image description](https://github.com/compbiolabucf/Drug-sensitivity-prediction/blob/master/Framework_nn_coexp.jpg)
 
 ## **nn_coexp.py**
 A deep neural network that takes gene expression as input, predict drug response in terms of AUC and finally gives the correlation coefficient between the predicted AUC and actual AUC as output. User needs to specify the path to the folder where the input and target files are saved at the beginning of the code to the variable **_path_**. It uses an embedding matrix build from local neighborhood structure to introduce network information into the prediction. This code selects top 50 features from each of gene expression and embedding matrix based on correlation coefficient between genes and target drug response and concatenate them. Number of features can be changed by modifying the variable **_N_input_**. 
