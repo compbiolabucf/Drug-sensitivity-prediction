@@ -130,8 +130,8 @@ for j in range(np.size(drug_data,1)):
        
     regressor = ElasticNet(l1_ratio=0.5,max_iter=5000, positive=False,      
                 precompute=False,random_state=0, tol=0.0001, warm_start=False)
-    regressor.fit(X1_train, y_train)
-    y_pred = regressor.predict(X1_test)
+    regressor.fit(X_train, y_train)
+    y_pred = regressor.predict(X_test)
     
     corr, _ = pearsonr(y_test,y_pred)
     corr_drug.append(corr)
