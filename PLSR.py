@@ -130,8 +130,8 @@ for j in range(np.size(drug_data,1)):
     X_test=X_test[:,index]    
    
     regressor = PLSRegression(n_components=1)
-    regressor.fit(X1_train, y_train)
-    y_pred = regressor.predict(X1_test)
+    regressor.fit(X_train, y_train)
+    y_pred = regressor.predict(X_test)
     y_pred=y_pred.ravel()
 
     corr, _ = pearsonr(y_test,y_pred)
