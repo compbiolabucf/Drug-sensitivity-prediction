@@ -108,9 +108,9 @@ for j in range(np.size(drug_data,1)):
     
     if FS==1:
       cc = np.zeros((1,np.size(X,1)))
-      for j in range(np.size(X,1)):
-        D= pearsonr(ma.masked_invalid(X_train[:,j]), ma.masked_invalid(y_train))[0]
-        cc[0,j] = D
+      for jj in range(np.size(X,1)):
+        D= pearsonr(ma.masked_invalid(X_train[:,jj]), ma.masked_invalid(y_train))[0]
+        cc[0,jj] = D
       cc = np.nan_to_num(cc)
       F = normalnp(X, alpha, cc)
       sort=np.argsort(F,0)
@@ -118,7 +118,7 @@ for j in range(np.size(drug_data,1)):
       index=np.concatenate([sort[0:cutoff//2],sort[-cutoff//2:]])
     
     elif FS==0:
-      CC=[pearsonr(X_train[:, i], y_train)[0] for i in range(np.size(X_train,1))]
+      CC=[pearsonr(X_train[:, ii], y_train)[0] for ii in range(np.size(X_train,1))]
       sort=np.argsort(np.abs(CC))
       sort=sort[::-1]
       index=sort[0:cutoff]
